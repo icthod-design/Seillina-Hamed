@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing - TAPS Readers and Writers</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<h1>TAPS Readers and Writers</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="stories.html">Stories</a>
+<a href="about.html">About</a>
+<a href="pricing.html">Pricing</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+<main>
+<h2>Pricing Plans</h2>
+<div class="plan">Basic Website (No Database): $50</div>
+<div class="plan">Website + Database: $100</div>
+</main>
+<footer>
+© 2026 TAPS Readers and Writers
+</footer>
+</body>
+</html>
