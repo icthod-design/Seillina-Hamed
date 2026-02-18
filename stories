@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories - TAPS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf0; 
+            color: #000;
+            margin: 0;
+        }
+        header {
+            background-color: #d2b48c;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #000;
+        }
+        nav {
+            background: #deb887;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #000;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background: #c4a484;
+        }
+        section {
+            padding: 20px;
+        }
+        .story {
+            background: #fff8dc;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .story h3 {
+            color: #8b4513;
+        }
+        .upload-section {
+            background: #fdf5e6;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 800px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .upload-section h2 {
+            color: #8b4513;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background: #d2b48c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #c4a484;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Stories 📚</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="stories.html">Stories</a>
+<a href="C:\Users\ASUS\Downloads\TAPS Read and Write\upload page.html">upload</a>
+</nav>
+
+<section>
+    <div class="story">
+        <h3>The Journey of Reading</h3>
+        <p>Reading opens doors to new worlds. Every book brings knowledge, inspiration, and a chance to grow your imagination. It’s the key to lifelong learning.</p>
+    </div>
+
+    <div class="story">
+        <h3>The Journey of Writing</h3>
+        <p>Writing allows us to share ideas and emotions. Through words, we create connections and preserve knowledge for generations to come.</p>
+    </div>
+
+    <div class="story">
+        <h3>The Magic of Libraries</h3>
+        <p>Libraries are treasure chests of wisdom, offering stories that link the past, present, and future. They are havens for curious minds.</p>
+    </div>
+</section>
+
+<section class="upload-section">
+    <h2>Submit Your Book (PDF)</h2>
+    <form id="storyForm">
+        <label for="bookTitle">Book Title:</label>
+        <input type="text" id="bookTitle" name="bookTitle" placeholder="Enter book title" required>
+
+        <label for="bookFile">Upload Book PDF:</label>
+        <input type="file" id="bookFile" name="bookFile" accept=".pdf" required>
+
+        <label for="payment">Payment Amount (USD):</label>
+        <input type="number" id="payment" name="payment" placeholder="Enter amount" required>
+
+        <button type="submit">Submit Book</button>
+    </form>
+</section>
+
+<script>
+document.getElementById("storyForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    var title = document.getElementById("bookTitle").value;
+    var payment = document.getElementById("payment").value;
+    var fileInput = document.getElementById("bookFile");
+    var file = fileInput.files[0];
+
+    if (file && file.type === "application/pdf") {
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            localStorage.setItem("bookTitle", title);
+            localStorage.setItem("paymentAmount", payment);
+            localStorage.setItem("bookFileData", event.target.result);
+            localStorage.setItem("bookFileName", file.name);
+
+            window.location.href = "C:\Users\ASUS\Downloads\TAPS Read and Write\upload page.html";
+        };
+        reader.readAsDataURL(file);
+    } else {
+        alert("Please upload a PDF file.");
+    }
+});
+</script>
+
+</body>
+</html>
+
