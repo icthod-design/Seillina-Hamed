@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAPS Readers and Writers</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<h1>TAPS Readers and Writers</h1>
+<!-- Reading and Writing Section -->
+<!-- Reading and Writing Section -->
+<section id="reading-writing" style="padding: 20px; background-color: #f9f9f9;">
+    <h2 style="text-align:center; color: black;"> Reading & Writing Facts</h2>
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;">
+        
+        <!-- Fact 1 -->
+        <div style="max-width:300px; text-align:center; border:1px solid #ddd; border-radius:10px; padding:15px; background-color: white;">
+            <img src="C:\Users\ASUS\Downloads\TAPS Read and Write\images\book 3.jpeg" alt="Reading" style="width:100%; border-radius:10px;">
+            <h3 style="color: black;">Fact #1</h3>
+            <p style="color: black;">Reading improves brain connectivity and increases vocabulary.</p>
+        </div>
+
+        <!-- Fact 2 -->
+        <div style="max-width:300px; text-align:center; border:1px solid #ddd; border-radius:10px; padding:15px; background-color: white;">
+            <img src="C:\Users\ASUS\Downloads\TAPS Read and Write\images\book 2.jpg" alt="Writing" style="width:100%; border-radius:10px;">
+            <h3 style="color: black;">Fact #2</h3>
+            <p style="color: black;">Writing helps you organize your thoughts and improves communication skills.</p>
+        </div>
+
+        <!-- Fact 3 -->
+        <div style="max-width:300px; text-align:center; border:1px solid #ddd; border-radius:10px; padding:15px; background-color: white;">
+            <img src="C:\Users\ASUS\Downloads\TAPS Read and Write\images\book 1.jpeg" alt="Library" style="width:100%; border-radius:10px;">
+            <h3 style="color: black;">Fact #3</h3>
+            <p style="color: black;">People who read regularly have better empathy and emotional intelligence.</p>
+        </div>
+
+    </div>
+</section>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="C:\Users\ASUS\Downloads\TAPS Read and Write\stories.html">Stories</a>
+<a href="about.html">About</a>
+<a href="pricing.html">Pricing</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+<main>
+<img src="book3d.png" alt="3D Book Icon" class="book-icon">
+<h2>Welcome to TAPS Readers and Writers!</h2>
+<p>This website was created by <strong>14-year-old Seilina Hamed</strong> from TAPS School to inspire everyone to read and write more in Arabic, English, and French.</p>
+</main>
+<footer>
+© 2026 TAPS Readers and Writers
+</footer>
+</body>
+</html>
