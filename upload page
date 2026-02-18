@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books Database</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+    }
+
+    header img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    h2 {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: white;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin: 20px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <section style="
+      background-image: url('https://www.shutterstock.com/image-photo/banner-laptop-office-supply-on-260nw-1912906804.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 80px 20px;
+      color: white;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.4);
+  ">
+    <h1 style="font-size: 3em; margin-bottom: 10px;">Books Database</h1>
+    <p style="font-size: 1.2em;">Manage all uploaded books in one place</p>
+  </section>
+</header>
+
+<h2>Book Information</h2>
+
+<form onsubmit="addBook(); return false;">
+  <input type="text" id="title" placeholder="Book Title" required>
+  <input type="number" id="payment" placeholder="Payment Amount (USD)" required>
+  <input type="url" id="pdfLink" placeholder="Google Drive PDF Link" required>
+  <button type="submit">Add Book</button>
+</form>
+
+<table id="booksTable">
+  <tr>
+    <th>Title</th>
+    <th>Payment</th>
+    <th>PDF Link</th>
+  </tr>
+</table>
+
+<a href="stories.html">← Back to Stories</a>
+
+<script>
+  function addBook() {
+    const title = document.getElementById('title').value;
+    const payment = document.getElementById('payment').value;
+    const pdfLink = document.getElementById('pdfLink').value;
+
+    const table = document.getElementById('booksTable');
+    const row = table.insertRow(-1);
+    row.insertCell(0).innerText = title;
+    row.insertCell(1).innerText = "$" + payment;
+    const linkCell = row.insertCell(2);
+    const a = document.createElement('a');
+    a.href = pdfLink;
+    a.target = "_blank";
+    a.innerText = "View PDF";
+    linkCell.appendChild(a);
+
+    // Reset form fields
+    document.getElementById('title').value = '';
+    document.getElementById('payment').value = '';
+    document.getElementById('pdfLink').value = '';
+  }
+</script>
+
+</body>
+</html>
